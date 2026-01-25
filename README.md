@@ -24,7 +24,6 @@
 | ソフト | 説明 |
 |--------|------|
 | [Node.js 18+](https://nodejs.org/) | JavaScript実行環境 |
-| [VOICEVOX](https://voicevox.hiroshiba.jp/) | 無料の音声合成ソフト |
 | [Claude Code](https://claude.ai/code) | 対話的に動画を作成（推奨） |
 
 ### 2. セットアップ
