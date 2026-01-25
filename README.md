@@ -35,9 +35,10 @@ cd my-video
 npm install
 ```
 
-### 3. VOICEVOXを起動
+### 3. VOICEVOXエンジン
 
-VOICEVOXアプリを起動しておいてください（音声生成に必要）。
+このプロジェクトはデフォルトでクラウド上のVOICEVOXエンジンを使用します。
+向き先は `src/config.ts` の `VOICEVOX_CONFIG.host` で変更できます。
 
 ### 4. プレビューサーバーを起動
 

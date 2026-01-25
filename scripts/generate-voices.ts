@@ -7,12 +7,13 @@
  *   npx ts-node scripts/generate-voices.ts
  *
  * 前提条件:
- *   - VOICEVOXがlocalhost:50021で起動していること
+ *   - VOICEVOXエンジンに接続できること（src/config.ts の VOICEVOX_CONFIG.host）
  */
 
 import * as fs from "fs";
 import * as path from "path";
 import { execSync } from "child_process";
+import { VIDEO_CONFIG, VOICEVOX_CONFIG } from "../src/config";
 
 const ROOT_DIR = process.cwd();
 
@@ -104,9 +105,9 @@ function getWavDuration(filePath: string): number {
 
 // メイン処理
 async function main() {
-  const host = "http://localhost:50021";
-  const fps = 30;
-  const playbackRate = 1.2;
+  const host = VOICEVOX_CONFIG.host;
+  const fps = VIDEO_CONFIG.fps;
+  const playbackRate = VIDEO_CONFIG.playbackRate;
 
   // VOICEVOX確認
   if (!(await checkVoicevox(host))) {
